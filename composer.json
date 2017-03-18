@@ -1,0 +1,27 @@
+{
+    "name": "opdavies/sculpin-twig-markdown-bundle",
+    "keywords": ["sculpin", "twig", "markdown"],
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Davies",
+            "email": "oliver@oliverdavies.uk",
+            "homepage": "https://www.oliverdavies.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "suggest": {
+        "sculpin/sculpin": "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "Opdavies\\Sculpin\\Bundle\\TwigMarkdownBundle\\": ""
+        }
+    },
+    "require": {
+        "snilius/twig-sort-by-field": "^0.1"
+    }
+}

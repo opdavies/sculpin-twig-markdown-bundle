@@ -1,0 +1,5 @@
+services:
+    twig.extension.markdown:
+        class: Opdavies\Sculpin\Bundle\TwigMarkdownBundle\Twig\MarkdownExtension
+        tags:
+            - { name: twig.extension }
