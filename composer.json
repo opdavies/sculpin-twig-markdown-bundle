@@ -20,8 +20,5 @@
         "psr-4": {
             "Opdavies\\Sculpin\\Bundle\\TwigMarkdownBundle\\": ""
         }
-    },
-    "require": {
-        "snilius/twig-sort-by-field": "^0.1"
     }
 }
