@@ -2,10 +2,16 @@
 
 namespace Opdavies\Sculpin\Bundle\TwigMarkdownBundle\Twig;
 
-use Michelf\Markdown;
-
 class MarkdownExtension extends \Twig_Extension
 {
+    /** @var SculpinTwigMarkdownParserInterface */
+    private $parser;
+
+    public function __construct(SculpinTwigMarkdownParserInterface $parser)
+    {
+        $this->parser = $parser;
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -27,8 +33,7 @@ class MarkdownExtension extends \Twig_Extension
      */
     public function markdown($text)
     {
-        // TODO: Inject from the container rather than calling directly.
-        return Markdown::defaultTransform($text);
+        return $this->parser->transform($text);
     }
 
     /**

@@ -1,5 +1,12 @@
+parameters:
+    twig.markdown.parser.class: 'Opdavies\Sculpin\Bundle\TwigMarkdownBundle\Twig\MarkdownParser'
+
 services:
+    twig.markdown.parser:
+        class: '%twig.markdown.parser.class%'
+
     twig.extension.markdown:
         class: Opdavies\Sculpin\Bundle\TwigMarkdownBundle\Twig\MarkdownExtension
+        arguments: ['@twig.markdown.parser']
         tags:
             - { name: twig.extension }
